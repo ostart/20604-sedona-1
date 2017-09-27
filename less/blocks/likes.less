@@ -1,0 +1,38 @@
+.likes {
+  font-size: @font-size-md;
+  font-weight: 700;
+  line-height: 1.71428;
+  margin-top: 9px;
+  margin-bottom: 17px;
+  padding-left: 35px;
+  display: block;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    background: url("../img/icon-like.svg") 0px 0px no-repeat;
+    top: -2px;
+    left: 0px;
+  }
+}
+
+
+@media @tablet-widths {
+  .likes {
+    margin-top: 23px;
+    padding-left: 33px;
+  }
+}
+
+@media @desktop-widths {
+  .likes {
+    margin-top: 19px;
+
+    &::before {
+      background-image: url("../img/icon-like-white.svg");
+    }
+  }
+}
