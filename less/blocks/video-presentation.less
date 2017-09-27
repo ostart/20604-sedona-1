@@ -1,0 +1,258 @@
+.video-presentation {
+  border-top: 1px solid @separator-line-color;
+  margin-bottom: 68px;
+  margin: 0 auto;
+  width: 320px;
+
+  &__title {
+    font-size: @font-size-lg;
+    font-weight: 700;
+    line-height: 1.4444;
+    color: black;
+    margin: 0 auto;
+    margin-top: 32px;
+    display: block;
+    width: 320px;
+  }
+
+  &__text {
+    font-size: @font-size-md;
+    font-weight: 400;
+    line-height: 1.71428;
+    color: @secondary-color;
+    margin: 0 auto;
+    margin-top: 29px;
+    margin-bottom: 38px;
+    width: 270px;
+  }
+
+  &__wrapper {
+    position: relative;
+    margin-bottom: 134px;
+  }
+
+  &__controls {
+    position: absolute;
+    left: 20px;
+    bottom: -60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 280px;
+    height: 111px;
+
+    button {
+      border: none;
+      background-color: transparent;
+      height: 66px;
+      background-color: @photo-descr-color-lighten;
+      cursor: pointer;
+      padding: 0;
+
+      svg {
+        fill: @video-controls-color;
+      }
+
+      &:hover {
+        svg {
+          fill: @secondary-color;
+        }
+      }
+
+      &:active {
+        svg {
+          fill: @video-controls-down-color;
+        }
+      }
+    }
+  }
+
+  &__timeline {
+    position: relative;
+    flex-grow: 1;
+    height: 45px;
+    width: 280px;
+    background-color: @video-mask-color;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  &__bar {
+    height: 3px;
+    background: @video-line-color;
+    width: 235px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__toggle {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-33%);
+    left: 20%;
+    width: 9px;
+    height: 9px;
+    background: white;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+  }
+
+  &__replay {
+    flex-basis: 156px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    svg {
+      margin-left: 25px;
+    }
+  }
+
+  &__subtitles {
+    flex-basis: 62px;
+
+    svg {
+      margin-left: 5px;
+    }
+  }
+
+  &__fullscreen {
+    flex-basis: 62px;
+  }
+}
+
+
+@media @tablet-widths {
+  .video-presentation {
+    border: none;
+    width: 648px;
+    margin-top: 29px;
+    margin-bottom: 0px;
+
+    img {
+      width: 648px;
+      height: 499px;
+    }
+
+    &__title {
+      font-size: @font-size-xxl;
+      width: 648px;
+    }
+
+    &__text {
+      width: 415px;
+      margin-top: 23px;
+    }
+
+    &__wrapper {
+      margin-top: 74px;
+      margin-bottom: 34px;
+    }
+
+    &__controls {
+      height: 92px;
+      width: 648px;
+      bottom: 6px;
+      left: 0px;
+      flex-wrap: nowrap;
+
+      button {
+        background-color: @video-mask-color;
+        height: 92px;
+
+        svg {
+          fill: white;
+        }
+      }
+    }
+
+    &__timeline {
+      height: 92px;
+      width: 100%;
+      padding: 0;
+      order: 2;
+    }
+
+    &__bar {
+      width: 100%;
+    }
+
+    &__toggle {
+      left: 32%;
+    }
+
+    &__replay {
+      order: 1;
+      flex-basis: 122px;
+      justify-content: center;
+
+      svg {
+        margin-left: 0px;
+      }
+    }
+
+    &__subtitles {
+      order: 3;
+      flex-basis: 126px;
+
+      svg {
+        margin-left: 32px;
+      }
+    }
+
+    &__fullscreen {
+      order: 4;
+      flex-basis: 126px;
+
+      svg {
+        margin-right: 19px;
+      }
+    }
+  }
+}
+
+@media @desktop-widths {
+  .video-presentation {
+    margin-top: 29px;
+    margin-bottom: 46px;
+    width: 800px;
+
+    img {
+      width: 800px;
+      height: 499px;
+    }
+
+    &__title {
+      width: 800px;
+    }
+
+    &__controls {
+      width: 800px;
+    }
+
+    &__toggle {
+      left: 21%;
+    }
+
+    &__replay {
+      flex-basis: 133px;
+
+      svg {
+        margin: 0 auto;
+      }
+    }
+
+    &__subtitles {
+      flex-basis: 120px;
+    }
+
+    &__fullscreen {
+      flex-basis: 120px;
+    }
+  }
+}

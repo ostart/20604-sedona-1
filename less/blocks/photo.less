@@ -1,0 +1,147 @@
+.photo {
+  width: 100%;
+  margin: 0 auto;
+  background-color: @main-color;
+}
+
+.photo__item-img {
+  border-top: 1px solid @separator-line-color;
+  margin: 0 auto;
+  width: 320px;
+
+  a {
+    height: 0px;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+    margin-top: 23px;
+    margin-bottom: 16px;
+  }
+}
+
+.photo__descr {
+  width: 280px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.photo__item-title {
+  font-size: @font-size-md;
+  font-weight: 700;
+  line-height: 1.71428;
+  display: block;
+  word-wrap: normal;
+}
+
+.photo__item-author {
+  font-size: @font-size-md;
+  font-weight: 400;
+  line-height: 1.71428;
+  display: block;
+  text-transform: none;
+}
+
+
+@media @tablet-widths {
+  .photo {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .photo__item {
+    width: 42%;
+
+    img {
+      height: 267px;
+    }
+
+    &:nth-of-type(2n) {
+      margin-left: 7.8125%;
+    }
+
+    &:nth-of-type(2n+1) {
+      margin-right: 7.8125%;
+    }
+
+    &:first-of-type {
+      width: 84.375%;
+      margin: 0 auto;
+
+      img {
+        height: 400px;
+      }
+    }
+  }
+
+  .photo__item-img {
+    border: none;
+    width: 100%;
+
+    img {
+      margin: 0;
+      width: 100%;
+    }
+  }
+
+  .photo__descr {
+    background-color: @photo-descr-color-lighten;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    min-height: 79px;
+    padding-left: 21px;
+    padding-right: 28px;
+    padding-bottom: 0px;
+    box-sizing: border-box;
+
+    div {
+      flex-basis: 58%;
+    }
+
+    &--biggest {
+      padding-right: 21px;
+    }
+
+    &--dark {
+      background-color: @photo-descr-color-darken;
+      padding-right: 34px;
+    }
+  }
+
+  div.photo__items-wrapper {
+    flex-basis: 77%;
+  }
+}
+
+@media @desktop-widths {
+  .photo__item {
+    width: 33.3333333%;
+    position: relative;
+
+    &:nth-of-type(2n) {
+      margin-left: 0;
+    }
+
+    &:nth-of-type(2n+1) {
+      margin-right: 0;
+    }
+
+    &:first-of-type {
+      width: 100%;
+    }
+  }
+
+  .photo__descr {
+    color: white;
+    background-color: @video-mask-color;
+    position: absolute;
+    bottom: 0%;
+  }
+
+  div.photo__items-wrapper {
+    flex-basis: 90%;
+  }
+}
