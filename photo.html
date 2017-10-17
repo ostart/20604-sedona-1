@@ -35,17 +35,17 @@
     <header class="page-header">
       <nav class="main-nav">
         <ul class="nav" id="nav"><!-- Класс сворачивающий меню nav--hidden" -->
-          <li class="nav__item"><a href="index.html">Главная</a></li>
+          <li class="nav__item"><a href="index.html" tabindex="1">Главная</a></li>
           <li class="nav__item  nav__item--active  nav__item--flex-growed"><a>Фото и видео</a></li>
-          <li class="nav__item"><a href="form.html">Форма отзыва</a></li>
-          <li class="nav__item"><a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
+          <li class="nav__item"><a href="form.html" tabindex="3">Форма отзыва</a></li>
+          <li class="nav__item"><a href="https://htmlacademy.ru/intensive/adaptive" tabindex="4">HTML Academy</a></li>
         </ul>
         <a class="main-nav__logo" href="index.html"><!-- Класс корректирующий положение логотипа при закрытом меню main-nav__logo--top-state -->
-          <h1>Седона</h1>
+          <h1 class="visually-hidden">Седона</h1>
           <picture>
             <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
-            <img src="img/logo-sedona-mobile.svg" alt="Логотип города Sedona"/>
+            <img src="img/logo-sedona-mobile.svg" alt="Логотип города Sedona" width="102" height="84"/>
           </picture>
         </a>
         <div class="toggler"><button class="toggler__btn  toggler__btn--opened" id="toggler-btn"></button></div><!-- Класс гамбургера в открытом состоянии toggler__btn--opened -->
@@ -66,6 +66,10 @@
         <div class="photo__item-img">
           <a href="#">
             <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-1-desktop@1x.webp 1x, img/photo-1-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-1-tablet@1x.webp 1x, img/photo-1-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/photo-1-mobile@1x.webp 1x, img/photo-1-mobile@2x.webp 2x">
+
               <source media="(min-width: 1200px)" srcset="img/photo-1-desktop@1x.jpg 1x, img/photo-1-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/photo-1-tablet@1x.jpg 1x, img/photo-1-tablet@2x.jpg 2x">
               <img src="img/photo-1-mobile@1x.jpg" srcset="img/photo-1-mobile@2x.jpg 2x" alt="Sedona road photo">
@@ -77,7 +81,7 @@
             <b class="photo__item-title">Неродные просторы</b>
             <span class="photo__item-author">Автор фото: Борис</span>
           </div>
-          <span class="likes">1350</span>
+          <span class="likes"><a class="visually-hidden" tabindex="5">Likes</a>1350</span>
         </div>
       </article>
 
@@ -85,6 +89,10 @@
         <div class="photo__item-img">
           <a href="#">
             <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-2-desktop@1x.webp 1x, img/photo-2-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-2-tablet@1x.webp 1x, img/photo-2-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/photo-2-mobile@1x.webp 1x, img/photo-2-mobile@2x.webp 2x">
+
               <source media="(min-width: 1200px)" srcset="img/photo-2-desktop@1x.jpg 1x, img/photo-2-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/photo-2-tablet@1x.jpg 1x, img/photo-2-tablet@2x.jpg 2x">
               <img src="img/photo-2-mobile@1x.jpg" srcset="img/photo-2-mobile@2x.jpg 2x" alt="Sedona flowers photo">
@@ -96,7 +104,7 @@
             <b class="photo__item-title">Местная&nbsp;растительность</b>
             <span class="photo__item-author">Автор фото: Сергей</span>
           </div>
-          <span class="likes">143</span>
+          <span class="likes"><a class="visually-hidden" tabindex="6">Likes</a>143</span>
         </div>
       </article>
 
@@ -104,6 +112,10 @@
         <div class="photo__item-img">
           <a href="#">
             <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-3-desktop@1x.webp 1x, img/photo-3-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-3-tablet@1x.webp 1x, img/photo-3-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/photo-3-mobile@1x.webp 1x, img/photo-3-mobile@2x.webp 2x">
+
               <source media="(min-width: 1200px)" srcset="img/photo-3-desktop@1x.jpg 1x, img/photo-3-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/photo-3-tablet@1x.jpg 1x, img/photo-3-tablet@2x.jpg 2x">
               <img src="img/photo-3-mobile@1x.jpg" srcset="img/photo-3-mobile@2x.jpg 2x" alt="Sedona road to North photo">
@@ -115,7 +127,7 @@
             <b class="photo__item-title">Дорога на север</b>
             <span class="photo__item-author">Автор фото: Петр</span>
           </div>
-          <span class="likes">96</span>
+          <span class="likes"><a class="visually-hidden" tabindex="7">Likes</a>96</span>
         </div>
       </article>
 
@@ -123,6 +135,10 @@
         <div class="photo__item-img">
           <a href="#">
             <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-4-desktop@1x.webp 1x, img/photo-4-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-4-tablet@1x.webp 1x, img/photo-4-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/photo-4-mobile@1x.webp 1x, img/photo-4-mobile@2x.webp 2x">
+
               <source media="(min-width: 1200px)" srcset="img/photo-4-desktop@1x.jpg 1x, img/photo-4-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/photo-4-tablet@1x.jpg 1x, img/photo-4-tablet@2x.jpg 2x">
               <img src="img/photo-4-mobile@1x.jpg" srcset="img/photo-4-mobile@2x.jpg 2x" alt="Sedona horror bridge photo">
@@ -134,7 +150,7 @@
             <b class="photo__item-title">Мост дьявола</b>
             <span class="photo__item-author">Автор фото: Антон</span>
           </div>
-          <span class="likes">254</span>
+          <span class="likes"><a class="visually-hidden" tabindex="8  ">Likes</a>254</span>
         </div>
       </article>
 
@@ -143,6 +159,10 @@
         <p class="video-presentation__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
         <div class="video-presentation__wrapper">
           <picture>
+            <source type="image/webp" media="(min-width: 1200px)" srcset="img/video-desktop@1x.webp 1x, img/video-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/video-tablet@1x.webp 1x, img/video-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/video-mobile@1x.webp 1x, img/video-mobile@2x.webp 2x">
+
             <source media="(min-width: 1200px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
             <img src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" alt="Video-player">
@@ -150,11 +170,20 @@
           <div class="video-presentation__controls">
             <div class="video-presentation__timeline">
               <div class="video-presentation__bar"></div>
-              <div class="video-presentation__toggle"></div>
+              <div class="video-presentation__toggle"><span class="visually-hidden">Toggler</span></div>
             </div>
-            <button class="video-presentation__replay"><svg width="16" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-video-replay"></use></svg></button>
-            <button class="video-presentation__subtitles"><svg width="32" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-video-subtitles"></use></svg></button>
-            <button class="video-presentation__fullscreen"><svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-video-fullscreen"></use></svg></button>
+            <button class="video-presentation__replay" tabindex="9">
+              <span class="visually-hidden">Replay</span>
+              <svg width="16" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-video-replay"></use></svg>
+            </button>
+            <button class="video-presentation__subtitles" tabindex="10">
+              <span class="visually-hidden">Subtitles</span>
+              <svg width="32" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-video-subtitles"></use></svg>
+            </button>
+            <button class="video-presentation__fullscreen" tabindex="11">
+              <span class="visually-hidden">Full screen</span>
+              <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-video-fullscreen"></use></svg>
+            </button>
           </div>
         </div>
       </article>
@@ -166,14 +195,26 @@
       <b class="page-footer__hashtag">#VISITSEDONA</b>
 
       <ul class="social-links">
-        <li><a class="social-links__item social-links__item--twitter" href="#"><svg width="18" height="15"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-twitter"></use></svg></a></li>
-        <li><a class="social-links__item social-links__item--facebook" href="#"><svg width="9" height="19"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-facebook"></use></svg></a></li>
-        <li><a class="social-links__item social-links__item--youtube" href="#"><svg width="20" height="15"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-youtube"></use></svg></a></li>
+        <li><a class="social-links__item social-links__item--twitter" href="#" tabindex="12">
+            <span class="visually-hidden">Twitter</span>
+            <svg width="18" height="15"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-twitter"></use></svg>
+        </a></li>
+        <li><a class="social-links__item social-links__item--facebook" href="#" tabindex="13">
+            <span class="visually-hidden">Facebook</span>
+            <svg width="9" height="19"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-facebook"></use></svg>
+        </a></li>
+        <li><a class="social-links__item social-links__item--youtube" href="#" tabindex="14">
+            <span class="visually-hidden">YouTube</span>
+            <svg width="20" height="15"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-youtube"></use></svg>
+        </a></li>
       </ul>
 
       <div class="page-footer__developer">
         <span>Разработано</span>
-        <a href="https://htmlacademy.ru/intensive/adaptive"><svg width="27" height="34"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-html-academy"></use></svg></a>
+        <a href="https://htmlacademy.ru/intensive/adaptive" tabindex="15">
+          <span class="visually-hidden">Logo HTMLAcademy</span>
+          <svg width="27" height="34"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-html-academy"></use></svg>
+        </a>
       </div>
     </footer>
     <script type="text/javascript" src="js/script.js"></script>
